@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>SELECT name FROM book</title>
+	<style>
+      h1 {
+			color: red;
+		}
+	</style>
+</head>
+<body>
+	<center>
+		<h1>SELECT name FROM book</h1>
+		<table border="1">
+			<tr>
+				<td>제목</td>
+			</tr>
+			<%
+			for(var i=0; i<rows.length; i++)
+			{
+				var data = rows[i];
+			%>
+			<tr>
+				<td><%=data.name%></td>
+			</tr>
+			<%}%>
+		</table>
+	</center>
+</body>
+</html>

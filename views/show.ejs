@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>SHOW TABLES</title>
+	<style>
+      h1 {
+			color: red;
+		}
+	</style>
+</head>
+<body>
+	<center>
+		<h1>SHOW TABLES</h1>
+		<table border="1">
+			<tr>
+				<td>Tables_in_testdb</td>
+			</tr>
+			<%
+			for(var i=0; i<rows.length; i++)
+			{
+				var data = rows[i];
+			%>
+			<tr>
+				<td><%=data.Tables_in_testdb%></td>
+			</tr>
+			<%}%>
+		</table>
+	</center>
+</body>
+</html>

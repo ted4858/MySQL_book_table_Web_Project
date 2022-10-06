@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>Desc Table</title>
+	<style>
+		h1 {
+			color: red;
+		}
+	</style>
+</head>
+<body>
+	<center>
+		<h1>Book Table</h1>
+		<table border="1">
+			<tr>
+				<td>Field</td>
+				<td>Type</td>
+				<td>Null</td>
+				<td>Key</td>
+				<td>Default</td>
+				<td>Extra</td>
+			</tr>
+			<%
+			for(var i=0; i<rows.length; i++)
+			{
+				var data = rows[i];
+			%>
+			<tr>
+				<td><%=data.Field%></td>
+				<td><%=data.Type%></td>
+				<td><%=data.Null%></td>
+				<td><%=data.Key%></td>
+				<td><%=data.Default%></td>
+				<td><%=data.Extra%></td>
+			</tr>
+			<%}%>
+		</table>
+	</center>
+</body>
+</html>
